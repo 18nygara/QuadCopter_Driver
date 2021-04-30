@@ -30,6 +30,8 @@ module QuadCopter_tb();
   ////////////////////////////////////////////////////////////////
   // Instantiate Physical Model of Copter with Inertial sensor //
   //////////////////////////////////////////////////////////////	
+
+  // THIS IS NOT INCLUDED IN THE REPO - THIS WAS A TESTING MODULE THAT I DID NOT WRITE //
   CycloneIV iQuad(.clk(clk),.RST_n(RST_n),.SS_n(SS_n),.SCLK(SCLK),.MISO(MISO),
                   .MOSI(MOSI),.INT(INT),.frnt_ESC(frnt_ESC),.back_ESC(back_ESC),
                   .left_ESC(left_ESC),.rght_ESC(rght_ESC));				  			
