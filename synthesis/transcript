@@ -1,0 +1,979 @@
+# //  Questa Sim
+# //  Version 2020.2_2 linux Jun 13 2020
+# //
+# //  Copyright 1991-2020 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading project post_synth
+# Load canceled
+# Compile of CycloneIV.sv was successful.
+# Compile of QuadCopter_post_synth_tb.sv was successful.
+# Compile of RemoteComm.sv was successful.
+# Compile of reset_synch.sv was successful.
+# Compile of SPI_iNEMO3.sv was successful.
+# Compile of UART.sv was successful.
+# Compile of UART_rcv.sv was successful.
+# Compile of UART_tx.sv was successful.
+# Compile of QuadCopter.vg was successful.
+# 9 compiles, 0 failed with no errors.
+vsim work.QuadCopter_post_synth_tb -t ns +notimingchecks -L /filespace/a/anygard/ece551/SAED32_lib
+# vsim work.QuadCopter_post_synth_tb -t ns "+notimingchecks" -L /filespace/a/anygard/ece551/SAED32_lib 
+# Start time: 10:27:13 on Apr 30,2021
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# Loading sv_std.std
+# Loading work.QuadCopter_post_synth_tb(fast)
+# Loading work.QuadCopter(fast)
+# Loading /filespace/a/anygard/ece551/SAED32_lib.DFFASX1_RVT(fast)
+# Loading /filespace/a/anygard/ece551/SAED32_lib.DFFARX1_RVT(fast)
+# Loading /filespace/a/anygard/ece551/SAED32_lib.HADDX1_RVT(fast)
+# Loading /filespace/a/anygard/ece551/SAED32_lib.DFFARX2_RVT(fast)
+# Loading /filespace/a/anygard/ece551/SAED32_lib.DFFX1_RVT(fast)
+# Loading /filespace/a/anygard/ece551/SAED32_lib.FADDX1_RVT(fast)
+# Loading /filespace/a/anygard/ece551/SAED32_lib.DFFNARX1_RVT(fast)
+# Loading /filespace/a/anygard/ece551/SAED32_lib.XNOR2X2_RVT(fast)
+# Loading /filespace/a/anygard/ece551/SAED32_lib.XOR2X2_RVT(fast)
+# Loading /filespace/a/anygard/ece551/SAED32_lib.OAI22X1_RVT(fast)
+# Loading /filespace/a/anygard/ece551/SAED32_lib.AO22X1_RVT(fast)
+# Loading /filespace/a/anygard/ece551/SAED32_lib.AND2X1_RVT(fast)
+# Loading /filespace/a/anygard/ece551/SAED32_lib.AO21X1_RVT(fast)
+# Loading /filespace/a/anygard/ece551/SAED32_lib.NAND4X0_RVT(fast)
+# Loading /filespace/a/anygard/ece551/SAED32_lib.AND4X1_RVT(fast)
+# Loading /filespace/a/anygard/ece551/SAED32_lib.OR2X1_RVT(fast)
+# Loading /filespace/a/anygard/ece551/SAED32_lib.NAND2X0_RVT(fast)
+# Loading /filespace/a/anygard/ece551/SAED32_lib.OA21X1_RVT(fast)
+# Loading /filespace/a/anygard/ece551/SAED32_lib.NAND3X0_RVT(fast)
+# Loading /filespace/a/anygard/ece551/SAED32_lib.NOR2X0_RVT(fast)
+# Loading /filespace/a/anygard/ece551/SAED32_lib.OR3X1_RVT(fast)
+# Loading /filespace/a/anygard/ece551/SAED32_lib.OA22X1_RVT(fast)
+# Loading /filespace/a/anygard/ece551/SAED32_lib.AO221X1_RVT(fast)
+# Loading /filespace/a/anygard/ece551/SAED32_lib.AND3X1_RVT(fast)
+# Loading /filespace/a/anygard/ece551/SAED32_lib.AO222X1_RVT(fast)
+# Loading /filespace/a/anygard/ece551/SAED32_lib.AOI21X1_RVT(fast)
+# Loading /filespace/a/anygard/ece551/SAED32_lib.OA221X1_RVT(fast)
+# Loading /filespace/a/anygard/ece551/SAED32_lib.DFFASX2_RVT(fast)
+# Loading /filespace/a/anygard/ece551/SAED32_lib.XOR3X1_RVT(fast)
+# Loading /filespace/a/anygard/ece551/SAED32_lib.NBUFFX2_RVT(fast)
+# Loading /filespace/a/anygard/ece551/SAED32_lib.NAND2X1_RVT(fast)
+# Loading /filespace/a/anygard/ece551/SAED32_lib.INVX1_RVT(fast)
+# Loading /filespace/a/anygard/ece551/SAED32_lib.OR4X1_RVT(fast)
+# Loading /filespace/a/anygard/ece551/SAED32_lib.AND2X4_RVT(fast)
+# Loading /filespace/a/anygard/ece551/SAED32_lib.INVX0_RVT(fast)
+# Loading /filespace/a/anygard/ece551/SAED32_lib.INVX4_RVT(fast)
+# Loading /filespace/a/anygard/ece551/SAED32_lib.INVX2_RVT(fast)
+# Loading /filespace/a/anygard/ece551/SAED32_lib.AO21X2_RVT(fast)
+# Loading /filespace/a/anygard/ece551/SAED32_lib.AND4X2_RVT(fast)
+# Loading /filespace/a/anygard/ece551/SAED32_lib.NAND2X2_RVT(fast)
+# Loading /filespace/a/anygard/ece551/SAED32_lib.XOR2X1_RVT(fast)
+# Loading /filespace/a/anygard/ece551/SAED32_lib.OAI21X1_RVT(fast)
+# Loading /filespace/a/anygard/ece551/SAED32_lib.XNOR2X1_RVT(fast)
+# Loading /filespace/a/anygard/ece551/SAED32_lib.XNOR3X1_RVT(fast)
+# Loading /filespace/a/anygard/ece551/SAED32_lib.NOR4X1_RVT(fast)
+# Loading /filespace/a/anygard/ece551/SAED32_lib.AOI22X1_RVT(fast)
+# Loading /filespace/a/anygard/ece551/SAED32_lib.AND2X2_RVT(fast)
+# Loading /filespace/a/anygard/ece551/SAED32_lib.NOR3X0_RVT(fast)
+# Loading /filespace/a/anygard/ece551/SAED32_lib.OAI221X1_RVT(fast)
+# Loading /filespace/a/anygard/ece551/SAED32_lib.NAND4X1_RVT(fast)
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iCOMM/iUART/iTX/tx_shift_reg_reg[0] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iCOMM/iUART/iTX/tx_shift_reg_reg[0]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1018
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iCOMM/iUART/iTX/tx_shift_reg_reg[1] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iCOMM/iUART/iTX/tx_shift_reg_reg[1]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1019
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iCOMM/iUART/iTX/tx_shift_reg_reg[2] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iCOMM/iUART/iTX/tx_shift_reg_reg[2]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1020
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iCOMM/iUART/iTX/tx_shift_reg_reg[3] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iCOMM/iUART/iTX/tx_shift_reg_reg[3]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1021
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iCOMM/iUART/iTX/tx_shift_reg_reg[4] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iCOMM/iUART/iTX/tx_shift_reg_reg[4]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1022
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iCOMM/iUART/iTX/tx_shift_reg_reg[5] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iCOMM/iUART/iTX/tx_shift_reg_reg[5]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1023
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iCOMM/iUART/iTX/tx_shift_reg_reg[6] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iCOMM/iUART/iTX/tx_shift_reg_reg[6]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1024
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iCOMM/iUART/iTX/tx_shift_reg_reg[7] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iCOMM/iUART/iTX/tx_shift_reg_reg[7]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1025
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iCOMM/iUART/iTX/baud_cnt_reg[9] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iCOMM/iUART/iTX/baud_cnt_reg[9]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1028
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iCOMM/iUART/iTX/baud_cnt_reg[5] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iCOMM/iUART/iTX/baud_cnt_reg[5]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1036
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iCOMM/iUART/iTX/baud_cnt_reg[3] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iCOMM/iUART/iTX/baud_cnt_reg[3]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1040
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iCOMM/iUART/iTX/baud_cnt_reg[2] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iCOMM/iUART/iTX/baud_cnt_reg[2]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1042
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iCOMM/iUART/iRX/shift_reg_reg[0] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iCOMM/iUART/iRX/shift_reg_reg[0]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1087
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iCOMM/iUART/iRX/shift_reg_reg[1] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iCOMM/iUART/iRX/shift_reg_reg[1]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1089
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iCOMM/iUART/iRX/shift_reg_reg[2] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iCOMM/iUART/iRX/shift_reg_reg[2]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1091
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iCOMM/iUART/iRX/shift_reg_reg[3] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iCOMM/iUART/iRX/shift_reg_reg[3]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1093
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iCOMM/iUART/iRX/rx_flop_reg '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iCOMM/iUART/iRX/rx_flop_reg  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1131
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iCMD/mtr_ramp_tmr_reg[8] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iCMD/mtr_ramp_tmr_reg[8]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1133
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iCMD/mtr_ramp_tmr_reg[7] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iCMD/mtr_ramp_tmr_reg[7]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1135
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iCMD/mtr_ramp_tmr_reg[6] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iCMD/mtr_ramp_tmr_reg[6]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1137
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iCMD/mtr_ramp_tmr_reg[5] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iCMD/mtr_ramp_tmr_reg[5]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1139
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iCMD/mtr_ramp_tmr_reg[4] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iCMD/mtr_ramp_tmr_reg[4]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1141
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iCMD/mtr_ramp_tmr_reg[3] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iCMD/mtr_ramp_tmr_reg[3]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1143
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iCMD/mtr_ramp_tmr_reg[2] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iCMD/mtr_ramp_tmr_reg[2]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1145
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iCMD/mtr_ramp_tmr_reg[1] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iCMD/mtr_ramp_tmr_reg[1]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1147
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iCMD/thrst_reg[8] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iCMD/thrst_reg[8]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1155
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iCMD/thrst_reg[7] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iCMD/thrst_reg[7]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1157
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iCMD/thrst_reg[5] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iCMD/thrst_reg[5]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1161
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iCMD/thrst_reg[4] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iCMD/thrst_reg[4]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1163
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iCMD/thrst_reg[3] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iCMD/thrst_reg[3]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1165
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iCMD/thrst_reg[2] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iCMD/thrst_reg[2]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1167
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iCMD/thrst_reg[1] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iCMD/thrst_reg[1]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1169
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iCMD/add_52/U1_1_8 '.  Expected 4, found 3.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iCMD/add_52/U1_1_8  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1193
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/AXH_reg[7] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/AXH_reg[7]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1195
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/AYH_reg[7] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/AYH_reg[7]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1197
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/AYH_reg[0] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/AYH_reg[0]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1199
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/AYH_reg[1] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/AYH_reg[1]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1201
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/AYH_reg[2] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/AYH_reg[2]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1203
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/AYH_reg[3] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/AYH_reg[3]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1205
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/AYH_reg[4] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/AYH_reg[4]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1207
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/AYH_reg[5] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/AYH_reg[5]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1209
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/AYH_reg[6] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/AYH_reg[6]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1211
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/AYL_reg[1] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/AYL_reg[1]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1213
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/AYL_reg[2] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/AYL_reg[2]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1215
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/AYL_reg[3] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/AYL_reg[3]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1217
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/AYL_reg[4] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/AYL_reg[4]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1219
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/AYL_reg[5] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/AYL_reg[5]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1221
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/AYL_reg[6] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/AYL_reg[6]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1223
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/AYL_reg[7] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/AYL_reg[7]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1225
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/AXH_reg[0] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/AXH_reg[0]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1227
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/AXH_reg[1] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/AXH_reg[1]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1229
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/AXH_reg[2] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/AXH_reg[2]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1231
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/AXH_reg[3] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/AXH_reg[3]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1233
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/AXH_reg[4] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/AXH_reg[4]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1235
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/AXH_reg[5] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/AXH_reg[5]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1237
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/AXH_reg[6] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/AXH_reg[6]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1239
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/AXL_reg[1] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/AXL_reg[1]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1241
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/AXL_reg[2] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/AXL_reg[2]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1243
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/AXL_reg[3] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/AXL_reg[3]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1245
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/AXL_reg[4] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/AXL_reg[4]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1247
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/AXL_reg[5] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/AXL_reg[5]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1249
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/AXL_reg[6] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/AXL_reg[6]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1251
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/AXL_reg[7] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/AXL_reg[7]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1253
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/yawH_reg[0] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/yawH_reg[0]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1255
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/yawH_reg[1] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/yawH_reg[1]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1257
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/yawH_reg[2] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/yawH_reg[2]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1259
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/yawH_reg[3] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/yawH_reg[3]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1261
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/yawH_reg[4] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/yawH_reg[4]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1263
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/yawH_reg[5] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/yawH_reg[5]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1265
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/yawH_reg[6] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/yawH_reg[6]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1267
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/yawH_reg[7] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/yawH_reg[7]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1269
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/yawL_reg[1] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/yawL_reg[1]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1271
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/yawL_reg[2] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/yawL_reg[2]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1273
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/yawL_reg[3] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/yawL_reg[3]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1275
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/yawL_reg[4] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/yawL_reg[4]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1277
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/yawL_reg[5] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/yawL_reg[5]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1279
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/yawL_reg[6] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/yawL_reg[6]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1281
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/yawL_reg[7] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/yawL_reg[7]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1283
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/rollH_reg[0] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/rollH_reg[0]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1285
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/rollH_reg[1] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/rollH_reg[1]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1287
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/rollH_reg[2] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/rollH_reg[2]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1289
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/rollH_reg[3] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/rollH_reg[3]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1291
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/rollH_reg[4] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/rollH_reg[4]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1293
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/rollH_reg[5] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/rollH_reg[5]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1295
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/rollH_reg[6] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/rollH_reg[6]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1297
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/rollH_reg[7] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/rollH_reg[7]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1299
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/rollL_reg[1] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/rollL_reg[1]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1301
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/rollL_reg[2] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/rollL_reg[2]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1303
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/rollL_reg[3] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/rollL_reg[3]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1305
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/rollL_reg[4] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/rollL_reg[4]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1307
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/rollL_reg[5] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/rollL_reg[5]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1309
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/rollL_reg[6] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/rollL_reg[6]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1311
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/rollL_reg[7] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/rollL_reg[7]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1313
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/pitchH_reg[0] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/pitchH_reg[0]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1315
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/pitchH_reg[1] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/pitchH_reg[1]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1316
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/pitchH_reg[2] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/pitchH_reg[2]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1317
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/pitchH_reg[3] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/pitchH_reg[3]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1318
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/pitchH_reg[4] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/pitchH_reg[4]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1319
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/pitchH_reg[5] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/pitchH_reg[5]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1320
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/pitchH_reg[6] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/pitchH_reg[6]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1321
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/pitchH_reg[7] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/pitchH_reg[7]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1322
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/pitchL_reg[1] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/pitchL_reg[1]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1323
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/pitchL_reg[2] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/pitchL_reg[2]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1324
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/pitchL_reg[3] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/pitchL_reg[3]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1325
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/pitchL_reg[4] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/pitchL_reg[4]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1326
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/pitchL_reg[5] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/pitchL_reg[5]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1327
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/pitchL_reg[6] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/pitchL_reg[6]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1328
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/pitchL_reg[7] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/pitchL_reg[7]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1329
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/timer_reg[15] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/timer_reg[15]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1336
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/timer_reg[14] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/timer_reg[14]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1338
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/timer_reg[13] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/timer_reg[13]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1340
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/timer_reg[12] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/timer_reg[12]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1342
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/timer_reg[11] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/timer_reg[11]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1344
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/timer_reg[10] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/timer_reg[10]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1346
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/timer_reg[9] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/timer_reg[9]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1348
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/timer_reg[8] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/timer_reg[8]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1350
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/timer_reg[7] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/timer_reg[7]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1352
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/timer_reg[6] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/timer_reg[6]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1354
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/timer_reg[5] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/timer_reg[5]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1356
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/timer_reg[4] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/timer_reg[4]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1358
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/timer_reg[3] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/timer_reg[3]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1360
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/timer_reg[2] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/timer_reg[2]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1362
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/timer_reg[1] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/timer_reg[1]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1364
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/INT_ff1_reg '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/INT_ff1_reg  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1372
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iSPI/shft_reg_reg[15] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iSPI/shft_reg_reg[15]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1384
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iSPI/shft_reg_reg[14] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iSPI/shft_reg_reg[14]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1386
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iSPI/shft_reg_reg[13] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iSPI/shft_reg_reg[13]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1388
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iSPI/shft_reg_reg[12] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iSPI/shft_reg_reg[12]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1390
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iSPI/shft_reg_reg[11] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iSPI/shft_reg_reg[11]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1392
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iSPI/shft_reg_reg[10] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iSPI/shft_reg_reg[10]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1394
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iSPI/shft_reg_reg[9] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iSPI/shft_reg_reg[9]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1396
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iSPI/shft_reg_reg[8] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iSPI/shft_reg_reg[8]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1398
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iSPI/shft_reg_reg[7] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iSPI/shft_reg_reg[7]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1400
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iSPI/shft_reg_reg[6] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iSPI/shft_reg_reg[6]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1402
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iSPI/shft_reg_reg[5] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iSPI/shft_reg_reg[5]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1404
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iSPI/shft_reg_reg[4] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iSPI/shft_reg_reg[4]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1406
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iSPI/shft_reg_reg[3] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iSPI/shft_reg_reg[3]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1408
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iSPI/shft_reg_reg[2] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iSPI/shft_reg_reg[2]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1410
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iSPI/shft_reg_reg[1] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iSPI/shft_reg_reg[1]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1412
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iSPI/shft_reg_reg[0] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iSPI/shft_reg_reg[0]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1414
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iSPI/bit_cntr_reg[3] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iSPI/bit_cntr_reg[3]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1416
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iSPI/bit_cntr_reg[2] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iSPI/bit_cntr_reg[2]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1418
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iSPI/bit_cntr_reg[1] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iSPI/bit_cntr_reg[1]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1420
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iSPI/SCLK_reg '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iSPI/SCLK_reg  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1425
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iSPI/SS_n_reg '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iSPI/SS_n_reg  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1427
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/ay_avg_reg[3] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/ay_avg_reg[3]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1437
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/ay_avg_reg[14] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/ay_avg_reg[14]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1439
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/ay_avg_reg[12] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/ay_avg_reg[12]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1441
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/ay_avg_reg[13] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/ay_avg_reg[13]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1443
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/ay_avg_reg[10] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/ay_avg_reg[10]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1445
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/ay_avg_reg[11] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/ay_avg_reg[11]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1447
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/ay_avg_reg[8] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/ay_avg_reg[8]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1449
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/ay_avg_reg[9] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/ay_avg_reg[9]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1451
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/ay_avg_reg[6] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/ay_avg_reg[6]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1453
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/ay_avg_reg[7] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/ay_avg_reg[7]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1455
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/ay_avg_reg[5] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/ay_avg_reg[5]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1457
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/avg_cntr_reg[3] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/avg_cntr_reg[3]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1459
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/avg_cntr_reg[1] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/avg_cntr_reg[1]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1461
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/roll_comp_reg[14] '.  Expected 4, found 3.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/roll_comp_reg[14]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1477
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/roll_comp_reg[13] '.  Expected 4, found 3.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/roll_comp_reg[13]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1479
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/roll_comp_reg[12] '.  Expected 4, found 3.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/roll_comp_reg[12]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1481
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/roll_comp_reg[11] '.  Expected 4, found 3.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/roll_comp_reg[11]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1483
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/roll_comp_reg[10] '.  Expected 4, found 3.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/roll_comp_reg[10]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1485
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/roll_comp_reg[9] '.  Expected 4, found 3.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/roll_comp_reg[9]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1487
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/roll_comp_reg[8] '.  Expected 4, found 3.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/roll_comp_reg[8]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1489
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/roll_comp_reg[7] '.  Expected 4, found 3.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/roll_comp_reg[7]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1491
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/roll_comp_reg[6] '.  Expected 4, found 3.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/roll_comp_reg[6]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1493
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/roll_comp_reg[5] '.  Expected 4, found 3.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/roll_comp_reg[5]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1495
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/roll_comp_reg[4] '.  Expected 4, found 3.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/roll_comp_reg[4]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1497
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/roll_comp_reg[3] '.  Expected 4, found 3.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/roll_comp_reg[3]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1499
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/roll_comp_reg[2] '.  Expected 4, found 3.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/roll_comp_reg[2]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1501
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/roll_comp_reg[1] '.  Expected 4, found 3.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/roll_comp_reg[1]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1503
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/roll_int_reg[3] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/roll_int_reg[3]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1537
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/roll_int_reg[2] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/roll_int_reg[2]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1539
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/roll_int_reg[1] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/roll_int_reg[1]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1541
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/roll_int_reg[0] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/roll_int_reg[0]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1543
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/roll_int_part1_reg[26] '.  Expected 4, found 3.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/roll_int_part1_reg[26]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1545
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/roll_int_part1_reg[25] '.  Expected 4, found 3.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/roll_int_part1_reg[25]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1547
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/roll_int_part1_reg[24] '.  Expected 4, found 3.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/roll_int_part1_reg[24]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1549
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/roll_int_part1_reg[23] '.  Expected 4, found 3.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/roll_int_part1_reg[23]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1551
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/roll_int_part1_reg[22] '.  Expected 4, found 3.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/roll_int_part1_reg[22]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1553
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/roll_int_part1_reg[21] '.  Expected 4, found 3.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/roll_int_part1_reg[21]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1555
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/roll_int_part1_reg[20] '.  Expected 4, found 3.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/roll_int_part1_reg[20]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1557
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/roll_int_part1_reg[19] '.  Expected 4, found 3.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/roll_int_part1_reg[19]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1559
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/roll_int_part1_reg[18] '.  Expected 4, found 3.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/roll_int_part1_reg[18]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1561
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/roll_int_part1_reg[17] '.  Expected 4, found 3.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/roll_int_part1_reg[17]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1563
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/roll_int_part1_reg[16] '.  Expected 4, found 3.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/roll_int_part1_reg[16]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1565
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/roll_int_part1_reg[15] '.  Expected 4, found 3.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/roll_int_part1_reg[15]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1567
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/roll_int_part1_reg[14] '.  Expected 4, found 3.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/roll_int_part1_reg[14]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1569
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/roll_int_part1_reg[13] '.  Expected 4, found 3.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/roll_int_part1_reg[13]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1571
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/roll_int_part1_reg[12] '.  Expected 4, found 3.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/roll_int_part1_reg[12]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1573
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/roll_int_part1_reg[11] '.  Expected 4, found 3.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/roll_int_part1_reg[11]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1575
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/roll_int_part1_reg[10] '.  Expected 4, found 3.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/roll_int_part1_reg[10]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1577
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/roll_int_part1_reg[9] '.  Expected 4, found 3.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/roll_int_part1_reg[9]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1579
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/roll_int_part1_reg[8] '.  Expected 4, found 3.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/roll_int_part1_reg[8]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1581
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/roll_int_part1_reg[7] '.  Expected 4, found 3.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/roll_int_part1_reg[7]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1583
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/roll_int_part1_reg[6] '.  Expected 4, found 3.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/roll_int_part1_reg[6]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1585
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/roll_int_part1_reg[5] '.  Expected 4, found 3.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/roll_int_part1_reg[5]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1587
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/roll_int_part1_reg[4] '.  Expected 4, found 3.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/roll_int_part1_reg[4]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1589
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/roll_int_part1_reg[3] '.  Expected 4, found 3.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/roll_int_part1_reg[3]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1591
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/roll_int_part1_reg[2] '.  Expected 4, found 3.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/roll_int_part1_reg[2]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1593
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/roll_int_part1_reg[1] '.  Expected 4, found 3.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/roll_int_part1_reg[1]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1595
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/roll_g_product_reg[13] '.  Expected 4, found 3.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/roll_g_product_reg[13]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1599
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/roll_g_product_reg[15] '.  Expected 4, found 3.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/roll_g_product_reg[15]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1604
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/roll_g_product_reg[16] '.  Expected 4, found 3.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/roll_g_product_reg[16]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1606
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/roll_g_product_reg[17] '.  Expected 4, found 3.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/roll_g_product_reg[17]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1608
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/roll_g_product_reg[18] '.  Expected 4, found 3.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/roll_g_product_reg[18]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1610
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/roll_g_product_reg[19] '.  Expected 4, found 3.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/roll_g_product_reg[19]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1612
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/roll_g_product_reg[20] '.  Expected 4, found 3.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/roll_g_product_reg[20]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1614
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/roll_g_product_reg[21] '.  Expected 4, found 3.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/roll_g_product_reg[21]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1616
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/roll_g_product_reg[22] '.  Expected 4, found 3.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/roll_g_product_reg[22]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1618
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/roll_g_product_reg[23] '.  Expected 4, found 3.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/roll_g_product_reg[23]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1620
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/ptch_comp_reg[14] '.  Expected 4, found 3.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/ptch_comp_reg[14]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1638
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/ptch_comp_reg[13] '.  Expected 4, found 3.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/ptch_comp_reg[13]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1640
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/ptch_comp_reg[12] '.  Expected 4, found 3.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/ptch_comp_reg[12]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1642
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/ptch_comp_reg[11] '.  Expected 4, found 3.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/ptch_comp_reg[11]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1644
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/ptch_comp_reg[10] '.  Expected 4, found 3.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/ptch_comp_reg[10]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1646
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/ptch_comp_reg[9] '.  Expected 4, found 3.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/ptch_comp_reg[9]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1648
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/ptch_comp_reg[8] '.  Expected 4, found 3.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/ptch_comp_reg[8]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1650
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/ptch_comp_reg[7] '.  Expected 4, found 3.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/ptch_comp_reg[7]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1652
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/ptch_comp_reg[6] '.  Expected 4, found 3.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/ptch_comp_reg[6]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1654
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/ptch_comp_reg[5] '.  Expected 4, found 3.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/ptch_comp_reg[5]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1656
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/ptch_comp_reg[4] '.  Expected 4, found 3.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/ptch_comp_reg[4]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1658
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/ptch_comp_reg[3] '.  Expected 4, found 3.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/ptch_comp_reg[3]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1660
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/ptch_comp_reg[2] '.  Expected 4, found 3.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/ptch_comp_reg[2]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1662
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/ptch_comp_reg[1] '.  Expected 4, found 3.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/ptch_comp_reg[1]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1664
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/ptch_int_reg[3] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/ptch_int_reg[3]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1698
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/ptch_int_reg[2] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/ptch_int_reg[2]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1700
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/ptch_int_reg[1] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/ptch_int_reg[1]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1702
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/ptch_int_reg[0] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/ptch_int_reg[0]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1704
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/ptch_int_part1_reg[26] '.  Expected 4, found 3.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/ptch_int_part1_reg[26]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1706
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/ptch_int_part1_reg[25] '.  Expected 4, found 3.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/ptch_int_part1_reg[25]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1708
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/ptch_int_part1_reg[24] '.  Expected 4, found 3.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/ptch_int_part1_reg[24]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1710
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/ptch_int_part1_reg[23] '.  Expected 4, found 3.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/ptch_int_part1_reg[23]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1712
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/ptch_int_part1_reg[22] '.  Expected 4, found 3.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/ptch_int_part1_reg[22]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1714
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/ptch_int_part1_reg[21] '.  Expected 4, found 3.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/ptch_int_part1_reg[21]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1716
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/ptch_int_part1_reg[20] '.  Expected 4, found 3.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/ptch_int_part1_reg[20]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1718
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/ptch_int_part1_reg[19] '.  Expected 4, found 3.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/ptch_int_part1_reg[19]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1720
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/ptch_int_part1_reg[18] '.  Expected 4, found 3.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/ptch_int_part1_reg[18]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1722
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/ptch_int_part1_reg[17] '.  Expected 4, found 3.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/ptch_int_part1_reg[17]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1724
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/ptch_int_part1_reg[16] '.  Expected 4, found 3.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/ptch_int_part1_reg[16]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1726
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/ptch_int_part1_reg[15] '.  Expected 4, found 3.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/ptch_int_part1_reg[15]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1728
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/ptch_int_part1_reg[14] '.  Expected 4, found 3.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/ptch_int_part1_reg[14]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1730
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/ptch_int_part1_reg[13] '.  Expected 4, found 3.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/ptch_int_part1_reg[13]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1732
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/ptch_int_part1_reg[12] '.  Expected 4, found 3.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/ptch_int_part1_reg[12]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1734
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/ptch_int_part1_reg[11] '.  Expected 4, found 3.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/ptch_int_part1_reg[11]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1736
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/ptch_int_part1_reg[10] '.  Expected 4, found 3.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/ptch_int_part1_reg[10]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1738
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/ptch_int_part1_reg[9] '.  Expected 4, found 3.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/ptch_int_part1_reg[9]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1740
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/ptch_int_part1_reg[8] '.  Expected 4, found 3.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/ptch_int_part1_reg[8]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1742
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/ptch_int_part1_reg[7] '.  Expected 4, found 3.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/ptch_int_part1_reg[7]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1744
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/ptch_int_part1_reg[6] '.  Expected 4, found 3.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/ptch_int_part1_reg[6]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1746
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/ptch_int_part1_reg[5] '.  Expected 4, found 3.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/ptch_int_part1_reg[5]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1748
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/ptch_int_part1_reg[4] '.  Expected 4, found 3.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/ptch_int_part1_reg[4]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1750
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/ptch_int_part1_reg[3] '.  Expected 4, found 3.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/ptch_int_part1_reg[3]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1752
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/ptch_int_part1_reg[2] '.  Expected 4, found 3.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/ptch_int_part1_reg[2]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1754
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/ptch_int_part1_reg[1] '.  Expected 4, found 3.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/ptch_int_part1_reg[1]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1756
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/ptch_g_product_reg[13] '.  Expected 4, found 3.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/ptch_g_product_reg[13]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1760
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/ptch_g_product_reg[15] '.  Expected 4, found 3.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/ptch_g_product_reg[15]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1765
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/ptch_g_product_reg[16] '.  Expected 4, found 3.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/ptch_g_product_reg[16]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1767
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/ptch_g_product_reg[17] '.  Expected 4, found 3.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/ptch_g_product_reg[17]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1769
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/ptch_g_product_reg[18] '.  Expected 4, found 3.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/ptch_g_product_reg[18]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1771
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/ptch_g_product_reg[19] '.  Expected 4, found 3.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/ptch_g_product_reg[19]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1773
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/ptch_g_product_reg[20] '.  Expected 4, found 3.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/ptch_g_product_reg[20]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1775
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/ptch_g_product_reg[21] '.  Expected 4, found 3.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/ptch_g_product_reg[21]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1777
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/ptch_g_product_reg[22] '.  Expected 4, found 3.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/ptch_g_product_reg[22]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1779
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/ptch_g_product_reg[23] '.  Expected 4, found 3.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/ptch_g_product_reg[23]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1781
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/ay_avg_reg[1] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/ay_avg_reg[1]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1813
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/ax_accum_reg[4] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/ax_accum_reg[4]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1843
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/ax_accum_reg[3] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/ax_accum_reg[3]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1845
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/ax_accum_reg[2] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/ax_accum_reg[2]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1847
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/ax_accum_reg[1] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/ax_accum_reg[1]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1849
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/ax_accum_reg[19] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/ax_accum_reg[19]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1852
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/ay_accum_reg[18] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/ay_accum_reg[18]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1854
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/ay_accum_reg[17] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/ay_accum_reg[17]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1856
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/ay_accum_reg[16] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/ay_accum_reg[16]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1858
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/ay_accum_reg[15] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/ay_accum_reg[15]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1860
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/ay_accum_reg[14] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/ay_accum_reg[14]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1862
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/ay_accum_reg[13] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/ay_accum_reg[13]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1864
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/ay_accum_reg[12] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/ay_accum_reg[12]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1866
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/ay_accum_reg[11] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/ay_accum_reg[11]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1868
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/ay_accum_reg[10] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/ay_accum_reg[10]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1870
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/ay_accum_reg[9] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/ay_accum_reg[9]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1872
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/ay_accum_reg[8] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/ay_accum_reg[8]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1874
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/ay_accum_reg[7] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/ay_accum_reg[7]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1876
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/ay_accum_reg[6] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/ay_accum_reg[6]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1878
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/ay_accum_reg[5] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/ay_accum_reg[5]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1880
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/ay_accum_reg[4] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/ay_accum_reg[4]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1882
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/ay_accum_reg[3] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/ay_accum_reg[3]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1884
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/ay_accum_reg[2] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/ay_accum_reg[2]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1886
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/ay_accum_reg[1] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/ay_accum_reg[1]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1888
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/ay_accum_reg[19] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/ay_accum_reg[19]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1891
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/yaw_int_reg[25] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/yaw_int_reg[25]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1893
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/yaw_int_reg[24] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/yaw_int_reg[24]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1895
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/yaw_int_reg[23] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/yaw_int_reg[23]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1897
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/yaw_int_reg[22] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/yaw_int_reg[22]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1899
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/yaw_int_reg[21] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/yaw_int_reg[21]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1901
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/yaw_int_reg[20] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/yaw_int_reg[20]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1903
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/yaw_int_reg[19] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/yaw_int_reg[19]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1905
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/yaw_int_reg[18] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/yaw_int_reg[18]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1907
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/yaw_int_reg[17] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/yaw_int_reg[17]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1909
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/yaw_int_reg[16] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/yaw_int_reg[16]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1911
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/yaw_int_reg[15] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/yaw_int_reg[15]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1913
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/yaw_int_reg[14] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/yaw_int_reg[14]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1915
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/yaw_int_reg[13] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/yaw_int_reg[13]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1917
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/yaw_int_reg[3] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/yaw_int_reg[3]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1937
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/yaw_int_reg[2] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/yaw_int_reg[2]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1939
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/yaw_int_reg[1] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/yaw_int_reg[1]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1941
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/yaw_comp_reg[14] '.  Expected 4, found 3.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/yaw_comp_reg[14]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1945
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/yaw_comp_reg[13] '.  Expected 4, found 3.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/yaw_comp_reg[13]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1947
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/yaw_comp_reg[12] '.  Expected 4, found 3.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/yaw_comp_reg[12]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1949
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/yaw_comp_reg[11] '.  Expected 4, found 3.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/yaw_comp_reg[11]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1951
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/yaw_comp_reg[10] '.  Expected 4, found 3.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/yaw_comp_reg[10]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1953
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/yaw_comp_reg[9] '.  Expected 4, found 3.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/yaw_comp_reg[9]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1955
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/yaw_comp_reg[8] '.  Expected 4, found 3.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/yaw_comp_reg[8]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1957
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/yaw_comp_reg[7] '.  Expected 4, found 3.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/yaw_comp_reg[7]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1959
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/yaw_comp_reg[6] '.  Expected 4, found 3.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/yaw_comp_reg[6]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1961
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/yaw_comp_reg[5] '.  Expected 4, found 3.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/yaw_comp_reg[5]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1963
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/yaw_comp_reg[4] '.  Expected 4, found 3.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/yaw_comp_reg[4]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1965
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/yaw_comp_reg[3] '.  Expected 4, found 3.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/yaw_comp_reg[3]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1967
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/yaw_comp_reg[2] '.  Expected 4, found 3.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/yaw_comp_reg[2]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1969
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/yaw_comp_reg[1] '.  Expected 4, found 3.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/yaw_comp_reg[1]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1971
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/vld_ff2_reg '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/vld_ff2_reg  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1975
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/vld_ff1_reg '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/vld_ff1_reg  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1977
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/state_reg[0] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/state_reg[0]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1979
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/smpl_cntr_reg[3] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/smpl_cntr_reg[3]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 1993
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/add_209/U1_19 '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/add_209/U1_19  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 2056
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/add_208/U1_19 '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/add_208/U1_19  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 2112
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/sub_112/U2_15 '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/sub_112/U2_15  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 2304
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/sub_111/U2_15 '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/sub_111/U2_15  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 2348
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/sub_110/U2_15 '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/sub_110/U2_15  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 2392
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\ifly/iPTCH/err_sat_piped_reg[2] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\ifly/iPTCH/err_sat_piped_reg[2]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 3024
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\ifly/iPTCH/err_sat_piped_reg[4] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\ifly/iPTCH/err_sat_piped_reg[4]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 3029
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\ifly/iPTCH/err_sat_piped_reg[5] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\ifly/iPTCH/err_sat_piped_reg[5]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 3031
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\ifly/iPTCH/err_sat_piped_reg[6] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\ifly/iPTCH/err_sat_piped_reg[6]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 3033
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\ifly/iPTCH/err_sat_piped_reg[7] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\ifly/iPTCH/err_sat_piped_reg[7]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 3035
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\ifly/iPTCH/err_sat_piped_reg[8] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\ifly/iPTCH/err_sat_piped_reg[8]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 3037
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\ifly/iPTCH/dterm_reg[1] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\ifly/iPTCH/dterm_reg[1]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 3043
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\ifly/iPTCH/dterm_reg[2] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\ifly/iPTCH/dterm_reg[2]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 3045
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\ifly/iPTCH/dterm_reg[3] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\ifly/iPTCH/dterm_reg[3]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 3047
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\ifly/iPTCH/dterm_reg[4] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\ifly/iPTCH/dterm_reg[4]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 3049
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\ifly/iPTCH/dterm_reg[5] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\ifly/iPTCH/dterm_reg[5]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 3051
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\ifly/iPTCH/dterm_reg[6] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\ifly/iPTCH/dterm_reg[6]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 3053
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\ifly/iPTCH/dterm_reg[7] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\ifly/iPTCH/dterm_reg[7]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 3055
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\ifly/iPTCH/dterm_reg[8] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\ifly/iPTCH/dterm_reg[8]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 3057
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\ifly/iPTCH/dterm_reg[9] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\ifly/iPTCH/dterm_reg[9]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 3059
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\ifly/iPTCH/dterm_reg[10] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\ifly/iPTCH/dterm_reg[10]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 3061
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\ifly/iPTCH/dterm_reg[11] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\ifly/iPTCH/dterm_reg[11]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 3063
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\ifly/iPTCH/sub_65/U2_9 '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\ifly/iPTCH/sub_65/U2_9  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 3089
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\ifly/iPTCH/sub_45/U2_16 '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\ifly/iPTCH/sub_45/U2_16  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 3136
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\ifly/iROLL/err_sat_piped_reg[2] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\ifly/iROLL/err_sat_piped_reg[2]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 3406
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\ifly/iROLL/err_sat_piped_reg[4] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\ifly/iROLL/err_sat_piped_reg[4]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 3411
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\ifly/iROLL/err_sat_piped_reg[5] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\ifly/iROLL/err_sat_piped_reg[5]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 3413
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\ifly/iROLL/err_sat_piped_reg[6] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\ifly/iROLL/err_sat_piped_reg[6]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 3415
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\ifly/iROLL/err_sat_piped_reg[7] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\ifly/iROLL/err_sat_piped_reg[7]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 3417
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\ifly/iROLL/err_sat_piped_reg[8] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\ifly/iROLL/err_sat_piped_reg[8]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 3419
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\ifly/iROLL/sub_65/U2_9 '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\ifly/iROLL/sub_65/U2_9  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 3469
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\ifly/iYAW/err_sat_piped_reg[2] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\ifly/iYAW/err_sat_piped_reg[2]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 3721
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\ifly/iYAW/err_sat_piped_reg[4] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\ifly/iYAW/err_sat_piped_reg[4]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 3726
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\ifly/iYAW/err_sat_piped_reg[5] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\ifly/iYAW/err_sat_piped_reg[5]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 3728
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\ifly/iYAW/err_sat_piped_reg[6] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\ifly/iYAW/err_sat_piped_reg[6]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 3730
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\ifly/iYAW/err_sat_piped_reg[7] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\ifly/iYAW/err_sat_piped_reg[7]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 3732
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\ifly/iYAW/err_sat_piped_reg[8] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\ifly/iYAW/err_sat_piped_reg[8]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 3734
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\ifly/iYAW/sub_45/U2_16 '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\ifly/iYAW/sub_45/U2_16  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 3827
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\ifly/add_1_root_add_0_root_add_63_5/U1_12 '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\ifly/add_1_root_add_0_root_add_63_5/U1_12  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 3936
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\ifly/add_2_root_add_0_root_add_63_5/U1_12 '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\ifly/add_2_root_add_0_root_add_63_5/U1_12  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 3983
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\ifly/add_0_root_add_0_root_add_63_5/U1_12 '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\ifly/add_0_root_add_0_root_add_63_5/U1_12  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 4030
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\ifly/sub_2_root_sub_0_root_add_59_3/U2_12 '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\ifly/sub_2_root_sub_0_root_add_59_3/U2_12  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 4107
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\ifly/add_1_root_sub_0_root_add_59_3/U1_12 '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\ifly/add_1_root_sub_0_root_add_59_3/U1_12  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 4154
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\ifly/add_0_root_sub_0_root_add_59_3/U1_12 '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\ifly/add_0_root_sub_0_root_add_59_3/U1_12  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 4201
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\ifly/sub_2_root_sub_0_root_sub_55_2/U2_12 '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\ifly/sub_2_root_sub_0_root_sub_55_2/U2_12  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 4248
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\ifly/add_1_root_sub_0_root_sub_55_2/U1_12 '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\ifly/add_1_root_sub_0_root_sub_55_2/U1_12  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 4324
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\ifly/add_0_root_sub_0_root_sub_55_2/U1_12 '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\ifly/add_0_root_sub_0_root_sub_55_2/U1_12  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 4363
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\ifly/add_2_root_sub_0_root_sub_51_4/U1_12 '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\ifly/add_2_root_sub_0_root_sub_51_4/U1_12  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 4410
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\ifly/sub_1_root_sub_0_root_sub_51_4/U2_12 '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\ifly/sub_1_root_sub_0_root_sub_51_4/U2_12  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 4479
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\ifly/sub_0_root_sub_0_root_sub_51_4/U2_12 '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\ifly/sub_0_root_sub_0_root_sub_51_4/U2_12  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 4526
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iESC/ifrnt/PWM_reg '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iESC/ifrnt/PWM_reg  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 4529
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iESC/ibck/PWM_reg '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iESC/ibck/PWM_reg  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 4632
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iESC/ilft/PWM_reg '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iESC/ilft/PWM_reg  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 4725
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iESC/irght/PWM_reg '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iESC/irght/PWM_reg  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 4818
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iRST/rst_n_reg '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iRST/rst_n_reg  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 4921
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iRST/rst_n_1_reg '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iRST/rst_n_1_reg  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 4923
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/ay_avg_reg[2] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/ay_avg_reg[2]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 7680
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/yaw_int_reg[26] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/yaw_int_reg[26]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 7689
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/INT_ff2_reg '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/INT_ff2_reg  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 7701
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iCOMM/iUART/iTX/curr_state_reg '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iCOMM/iUART/iTX/curr_state_reg  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 7709
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iCOMM/data_reg[15] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iCOMM/data_reg[15]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 7717
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iCOMM/data_reg[14] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iCOMM/data_reg[14]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 7719
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iCOMM/data_reg[13] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iCOMM/data_reg[13]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 7721
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iCOMM/data_reg[12] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iCOMM/data_reg[12]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 7723
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iCOMM/data_reg[11] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iCOMM/data_reg[11]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 7725
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iCOMM/data_reg[10] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iCOMM/data_reg[10]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 7727
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iCOMM/data_reg[9] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iCOMM/data_reg[9]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 7729
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iCOMM/data_reg[8] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iCOMM/data_reg[8]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 7731
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/yaw_off_reg[0] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/yaw_off_reg[0]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 7796
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/roll_off_reg[0] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/roll_off_reg[0]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 7798
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/ptch_off_reg[0] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iNEMO/iINT/ptch_off_reg[0]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 7800
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iCMD/d_ptch_reg[0] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iCMD/d_ptch_reg[0]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 7842
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\iCMD/d_roll_reg[0] '.  Expected 5, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /QuadCopter_post_synth_tb/iDUT/\iCMD/d_roll_reg[0]  File: /filespace/a/anygard/ece551/post_synth_proj/QuadCopter.vg Line: 7906
+run -all
+# Starting control workflow tests...
+# 
+# ~~~ Cycle          0 - control workflow test ~~~
+# 
+# Quadcopter is now airborne!
+# 
+# Cycle          0 control flow passed!
+# 
+# ~~~ Cycle          1 - control workflow test ~~~
+# 
+# Cycle          1 control flow passed!
+# 
+# ~~~ Cycle          2 - control workflow test ~~~
+# 
+# Cycle          2 control flow passed!
+# 
+# Control Workflow Tests Passed!
+# 
+# ~~~ Cycle          0 - simple test ~~~
+# 
+# Cycle          0 passed!
+# 
+# ~~~ Cycle          1 - simple test ~~~
+# 
+# Cycle          1 passed!
+# 
+# ~~~ Cycle          2 - simple test ~~~
+# 
+# Cycle          2 passed!
+# 
+# ~~~ Cycle          3 - simple test ~~~
+# 
+# Cycle          3 passed!
+# 
+# ~~~ Cycle          4 - simple test ~~~
+# 
+# Cycle          4 passed!
+# 
+# ~~~ Cycle          5 - simple test ~~~
+# 
+# Cycle          5 passed!
+# 
+# ~~~ Cycle          6 - simple test ~~~
+# 
+# Cycle          6 passed!
+# 
+# ~~~ Cycle          7 - simple test ~~~
+# 
+# Cycle          7 passed!
+# 
+# ~~~ Cycle          8 - simple test ~~~
+# 
+# Cycle          8 passed!
+# 
+# ~~~ Cycle          9 - simple test ~~~
+# 
+# Cycle          9 passed!
+# 
+# ~~~ Cycle         10 - simple test ~~~
+# 
+# Cycle         10 passed!
+# 
+# ~~~ Cycle         11 - simple test ~~~
+# 
+# Cycle         11 passed!
+# 
+# ~~~ Cycle         12 - simple test ~~~
+# 
+# Cycle         12 passed!
+# 
+# ~~~ Cycle         13 - simple test ~~~
+# 
+# Cycle         13 passed!
+# 
+# ~~~ Cycle         14 - simple test ~~~
+# 
+# Cycle         14 passed!
+# 
+# ~~~ Cycle         15 - simple test ~~~
+# 
+# Cycle         15 passed!
+# 
+# Simple tests passed!
+# 
+# Starting Complex pitch/roll/yaw tests...
+# 
+# Complex pitch/roll/yaw tests passed!
+# 
+# Starting Landing Sequence Testing...
+# 
+# Landing sequence passed!
+# 
+# All tests passed!
+# 
+# ** Note: $stop    : /filespace/a/anygard/ece551/post_synth_proj/QuadCopter_post_synth_tb.sv(62)
+#    Time: 315870405 ns  Iteration: 18  Instance: /QuadCopter_post_synth_tb
+# Break at /filespace/a/anygard/ece551/post_synth_proj/QuadCopter_post_synth_tb.sv line 62
+# End time: 10:50:04 on Apr 30,2021, Elapsed time: 0:22:51
+# Errors: 0, Warnings: 400

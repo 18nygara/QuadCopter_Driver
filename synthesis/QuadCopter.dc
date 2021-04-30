@@ -1,0 +1,98 @@
+##########################
+# read in verilog source #
+##########################
+read_file -format sverilog { ./QuadCopter.sv ./cmd_cfg.sv ./ESC_interface.sv ./ESCs.sv ./flght_cntrl.sv \
+./inert_intf.sv ./PD_math.sv ./reset_synch.sv ./SPI_mnrch.sv ./UART_comm.sv ./UART.sv ./UART_rcv.sv \
+./UART_tx.sv ./inertial_integrator.sv }
+
+############################
+# set the top level design #
+############################
+set current_design QuadCopter
+link
+
+##############################################################
+# define clock @ 266.6MHz and tell synopsys not to change it #
+##############################################################
+create_clock -name "clk" -period 3.75 -waveform {0 1.875} {clk}
+set_dont_touch_network [find port clk]
+
+############################################
+# get collection of all inputs without clk #
+############################################
+set prim_inputs [remove_from_collection [all_inputs] [find port clk]]
+
+#############################################################################################
+# set input delay and drive on all inputs - no need to remove rst_n since it isn't an input #
+#############################################################################################
+set_input_delay -clock clk 0.25 [copy_collection $prim_inputs]
+set_driving_cell -lib_cell NAND2X2_RVT -library saed32rvt_tt0p85v25c [copy_collection $prim_inputs]
+
+#####################################################################################################
+# tell synopsys not to touch the global reset so it doesn't try to buffer it or anything else wacky #
+#####################################################################################################
+set_dont_touch_network [get_net iRST/rst_n]
+
+########################################################
+# set output delay and load capacitance on all outputs #
+########################################################
+set_output_delay -clock clk 0.5 [all_outputs]
+set_load 0.10 [all_outputs]
+
+###############################
+# set the max transition time #
+###############################
+set_max_transition 0.15 [current_design]
+
+#######################
+# wire load model set #
+#######################
+set_wire_load_model -name 16000 -library saed32rvt_tt0p85v25c
+
+#############################
+# set the clock uncertainty #
+#############################
+set_clock_uncertainty 0.2 clk
+
+###################
+# initial compile #
+###################
+compile -map_effort low
+
+#######################
+# smash the hierarchy #
+#######################
+ungroup -all -flatten
+
+###############################
+# fix max delay timing issues #
+###############################
+set_fix_hold clk
+
+###############################
+# recompile after the changes #
+###############################
+compile -map_effort medium
+
+###################################
+# check the design one final time #
+###################################
+check_design
+
+##################################
+# output timing and area reports #
+##################################
+report_timing -path full -delay max
+report_timing -path full -delay min
+report_area > QuadCopter_area.txt
+
+##################################################
+# reports if there are any latches in the design #
+##################################################
+report_register -level_sensitive > latches.rpt
+
+############################
+# get netlist and sdc file #
+############################
+write -format verilog QuadCopter -output QuadCopter.vg
+write_sdc QuadCopter.sdc
